@@ -5,7 +5,7 @@
 #include <iostream>
 #include <thread>
 
-namespace fpcsc {
+namespace fp_util {
 
 inline void busy_sleep_for_secs(unsigned Secs) {
   auto start_ms = std::chrono::duration_cast<std::chrono::milliseconds>(
@@ -54,6 +54,6 @@ inline void sleep_for_millisecs(unsigned Millisecs) {
   std::this_thread::sleep_for(std::chrono::milliseconds(Millisecs));
 #endif
 }
-} // namespace fpcsc
+} // namespace fp_util
 
 #endif // FP_UTIL_SLEEP_H

@@ -5,7 +5,7 @@
 #include <stdlib.h>
 #include <string>
 
-namespace fpcsc {
+namespace fp_util {
 inline bool isFeatureEnabled(int argc, char *argv[], std::string FeatureName) {
   for (int CurrentArg = 1; CurrentArg < argc; ++CurrentArg) {
     if (argv[CurrentArg] == FeatureName) {
@@ -32,6 +32,6 @@ inline long getFeatureValue(int argc, char *argv[], std::string FeatureName) {
   return strtol(argv[CurrentArg], NULL, 0);
 }
 
-} // namespace fpcsc
+} // namespace fp_util
 
 #endif // FP_UTIL_FEATURECMD_H
