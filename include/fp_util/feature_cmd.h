@@ -16,7 +16,7 @@ inline bool isFeatureEnabled(int argc, char *argv[], std::string FeatureName) {
   return false;
 }
 
-inline long getFeatureValue(int argc, char *argv[], std::string FeatureName) {
+inline long getFeatureValue(int argc, char *argv[], std::string FeatureName, int Default = 0) {
   int CurrentArg = 1;
   for (; CurrentArg < argc; ++CurrentArg) {
     if (argv[CurrentArg] == FeatureName) {
@@ -26,7 +26,7 @@ inline long getFeatureValue(int argc, char *argv[], std::string FeatureName) {
   }
 
   if (CurrentArg >= argc) {
-    return 0;
+    return Default;
   }
 
   return strtol(argv[CurrentArg], NULL, 0);
