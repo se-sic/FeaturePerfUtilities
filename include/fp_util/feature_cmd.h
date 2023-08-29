@@ -33,6 +33,24 @@ inline long getFeatureValue(int argc, char *argv[], std::string FeatureName,
   return strtol(argv[CurrentArg], NULL, 0);
 }
 
+inline std::string getFeatureValueStr(int argc, char *argv[],
+                                      std::string FeatureName,
+                                      std::string Default = "") {
+  int CurrentArg = 1;
+  for (; CurrentArg < argc; ++CurrentArg) {
+    if (argv[CurrentArg] == FeatureName) {
+      ++CurrentArg;
+      break;
+    }
+  }
+
+  if (CurrentArg >= argc) {
+    return Default;
+  }
+
+  return std::string(argv[CurrentArg]);
+}
+
 } // namespace fp_util
 
 #endif // FP_UTIL_FEATURECMD_H
