@@ -1,8 +1,3 @@
-/**
- * Author:   Lukas
- * Created:  18/11/2023.
- **/
-
 #ifndef FEATURE_DETECT_H
 #define FEATURE_DETECT_H
 
