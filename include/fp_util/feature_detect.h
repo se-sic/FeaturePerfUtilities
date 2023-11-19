@@ -4,9 +4,9 @@
 namespace fp_util {
 
 __attribute__((feature_variable("__VARA__DETECT__"))) void detect() {
-  long counter = 0;
-  asm volatile("" : "+g"(counter) : :);
-  counter++;
+  long foo = 0;
+  asm volatile("" : "+g"(foo) : :);
+  foo++;
 }
 } // namespace fp_util
 
